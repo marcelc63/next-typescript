@@ -4,7 +4,7 @@ import {
   constructErrorPayload,
   constructExtraReducer,
 } from '~/store/helper'
-import { login as loginCall, logout as logoutCall } from '~/api/auth'
+import { login as loginCall, logout as logoutCall } from '~/apis/auth'
 
 interface IState {
   authenticated: boolean

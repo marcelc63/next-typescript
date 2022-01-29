@@ -1,4 +1,4 @@
-import API from '~/api/client'
+import API from '~/apis/client'
 
 export async function get() {
   return await API.handle(API.private.get(`/api/v1/users`))

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useState } from 'react'
 
 import { createFormData } from '~/helpers/upload'
-import { uploadImage } from '~/api/images'
+import { uploadImage } from '~/apis/images'
 
 import Button from '~/components/base/Button'
 

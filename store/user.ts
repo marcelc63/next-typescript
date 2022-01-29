@@ -5,7 +5,7 @@ import {
   constructDataValidationErrorPayload,
   constructExtraReducer,
 } from '~/store/helper'
-import { get as getCall, register as registerCall } from '~/api/user'
+import { get as getCall, register as registerCall } from '~/apis/user'
 import { authenticate } from '~/store/auth'
 import { schema } from '~/interfaces/Register'
 

@@ -1,4 +1,4 @@
-import API from '~/api/client'
+import API from '~/apis/client'
 
 export async function login(payload: object) {
   return await API.handle(API.public.post(`/api/public/login`, payload))
