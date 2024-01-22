@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { useState } from 'react'
 
-import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/solid'
+import { FaChevronUp, FaChevronDown } from 'react-icons/fa'
 
 interface ICollapsible {
   title: string
   className?: string
+  children: React.ReactNode
 }
 
 const Collapsible: React.FC<ICollapsible> = ({
@@ -23,9 +24,9 @@ const Collapsible: React.FC<ICollapsible> = ({
         <p className="font-bold">{title}</p>
         <p className="text-gray-400 text-sm">
           {show ? (
-            <ChevronDownIcon className="h-5 w-5" />
+            <FaChevronDown className="h-5 w-5" />
           ) : (
-            <ChevronUpIcon className="h-5 w-5" />
+            <FaChevronUp className="h-5 w-5" />
           )}
         </p>
       </div>

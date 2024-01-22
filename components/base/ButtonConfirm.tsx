@@ -6,6 +6,7 @@ import Modal from '~/components/base/Modal'
 
 interface IButtonConfirm extends IButton {
   message?: string
+  children: React.ReactNode
 }
 
 const ButtonConfirm: React.FC<IButtonConfirm> = React.forwardRef(

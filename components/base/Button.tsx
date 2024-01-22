@@ -15,6 +15,7 @@ export interface IButton {
   regular?: boolean
   large?: boolean
   disabled?: boolean
+  children: React.ReactNode
 }
 
 const Button: React.FC<IButton> = React.forwardRef(

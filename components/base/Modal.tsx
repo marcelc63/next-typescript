@@ -1,12 +1,13 @@
 import * as React from 'react'
 
 import styles from '~/styles/Modal.module.scss'
-import { XCircleIcon } from '@heroicons/react/solid'
+import { MdOutlineCancel } from 'react-icons/md'
 
 interface IModal {
   title?: string
   open: boolean
   close: any
+  children: React.ReactNode
 }
 
 const Modal: React.FC<IModal> = ({ open, close, title, children }) => {
@@ -27,7 +28,7 @@ const Modal: React.FC<IModal> = ({ open, close, title, children }) => {
             </div>
           )}
           {children}
-          <XCircleIcon
+          <MdOutlineCancel
             className="h-5 w-5 text-gray-500 cursor-pointer hover:text-gray-400 absolute top-2 right-2"
             onClick={close}
           />
