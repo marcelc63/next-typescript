@@ -14,6 +14,7 @@ interface ITextarea {
   className?: string
   register?: UseFormRegister<FieldValues>
   errors?: DeepMap<FieldValues, FieldError>
+  disabled?: boolean
 }
 
 const Textarea: React.FC<ITextarea> = ({
@@ -23,6 +24,7 @@ const Textarea: React.FC<ITextarea> = ({
   value,
   register,
   errors,
+  disabled,
 }: ITextarea) => {
   return register ? (
     <>
@@ -30,6 +32,7 @@ const Textarea: React.FC<ITextarea> = ({
         className={`border border-gray-200 rounded w-full p-2 ${className}`}
         placeholder={placeholder}
         value={value}
+        disabled={disabled}
         {...register(name)}
       />
       {errors?.[name] && (
@@ -42,6 +45,7 @@ const Textarea: React.FC<ITextarea> = ({
       placeholder={placeholder}
       value={value}
       name={name}
+      disabled={disabled}
     />
   )
 }

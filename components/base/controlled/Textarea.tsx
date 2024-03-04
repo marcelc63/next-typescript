@@ -6,6 +6,7 @@ interface ITextarea {
   value?: string
   className?: string
   onChange: Function
+  disabled?: boolean
 }
 
 const Textarea: React.FC<ITextarea> = ({
@@ -14,6 +15,7 @@ const Textarea: React.FC<ITextarea> = ({
   name,
   value,
   onChange,
+  disabled,
 }: ITextarea) => {
   return (
     <textarea
@@ -22,6 +24,7 @@ const Textarea: React.FC<ITextarea> = ({
       value={value}
       name={name}
       onChange={(e) => onChange(e)}
+      disabled={disabled}
     />
   )
 }

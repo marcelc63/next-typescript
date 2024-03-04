@@ -9,6 +9,7 @@ interface IInput {
   className?: string
   onChange: Function
   error?: FieldError
+  disabled?: boolean
 }
 
 const Input: React.FC<IInput> = ({
@@ -19,6 +20,7 @@ const Input: React.FC<IInput> = ({
   value,
   onChange,
   error,
+  disabled,
 }: IInput) => {
   return error ? (
     <>
@@ -28,6 +30,7 @@ const Input: React.FC<IInput> = ({
         type={type}
         value={value}
         name={name}
+        disabled={disabled}
         onChange={(e) => onChange(e)}
       />
       {error && <p className="mt-1 text-red-500 text-sm">{error.message}</p>}
@@ -39,6 +42,7 @@ const Input: React.FC<IInput> = ({
       type={type}
       value={value}
       name={name}
+      disabled={disabled}
       onChange={(e) => onChange(e)}
     />
   )
